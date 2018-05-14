@@ -10,13 +10,16 @@ import { BrowserRouter as Router, Route, Link,Switch } from "react-router-dom";
 
 import App from './router'
 
-ReactDOM.render(<Provider store={store}>
-    <div>
-        {/* <h1>Redux Shopping Cart</h1>
-        <p style={{borderBottom:'10px dotted blue'}}></p> */}
-        <App/>
-    </div>
-</Provider>, document.getElementById('root'));
+ReactDOM.render(
+    <Provider store={store}>
+        <div>
+            {/* <h1>Redux Shopping Cart</h1>
+            <p style={{borderBottom:'10px dotted blue'}}></p> */}
+            <App/>
+        </div>
+    </Provider>,
+    document.getElementById('root')
+);
 
 console.log("initial state: ", store.getState());
 

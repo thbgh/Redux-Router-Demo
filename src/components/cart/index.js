@@ -4,7 +4,7 @@
  * @Email:  thbwork2016@gmail.com
  * @Filename: App.js
  * @Last modified by:   THB
- * @Last modified time: 2018-05-13 19:01:27 PM Sunday
+ * @Last modified time: 2018-05-14 21:15:31 PM Monday
  */
 
 import React,{Component} from 'react';
@@ -23,25 +23,16 @@ class Index extends Component {
         return (<div>
             <h2>Cart</h2>
             <div>
-                <ul>
-                <li>
-                <Link to="/">Home</Link>
-                </li>
-                <li>
-                <Link to="/cart">cart</Link>
-                </li>
-                <li>
-                <Link to="/products">products</Link>
-                </li>
-                </ul>
-                <hr />
+                <span>
+                    {
+                        value.map((item, index) => {
+                            return <div key={index}>{`'product':${item.product}, 'quantity':${item.quantity},'unitCost':${item.unitCost}`}
+                            </div>
+                        })
+                    }</span>
+                <br/>
             </div>
-            <span>{
-                    value.map((item, index) => {
-                        return <div key={index}>{`'product':${item.product}, 'quantity':${item.quantity},'unitCost':${item.unitCost}`}
-                        </div>
-                    })
-                }</span><br/>
+
             <button onClick={onIncreaseClick}>Increase</button>
             <button onClick={onUpdateClick}>Update</button>
             <button onClick={onDeleteClick}>Delete</button>

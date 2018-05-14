@@ -4,7 +4,7 @@
  * @Email:  thbwork2016@gmail.com
  * @Filename: index.js
  * @Last modified by:   THB
- * @Last modified time: 2018-05-13 18:59:47 PM Sunday
+ * @Last modified time: 2018-05-14 21:14:23 PM Monday
  */
 
 
@@ -26,25 +26,14 @@ class Index extends Component {
         return (<div>
             <h2>Products</h2>
             <div>
-                <ul>
-                <li>
-                <Link to="/">Home</Link>
-                </li>
-                <li>
-                <Link to="/cart">cart</Link>
-                </li>
-                <li>
-                <Link to="/products">products</Link>
-                </li>
-                </ul>
-                <hr />
+                {value.map((item, index) => {
+                        return <div key={index}>{`'product':${item.product},'quantity':${item.quantity}`}
+                        </div>
+                    })
+                }<br/>
             </div>
 
-            {value.map((item, index) => {
-                    return <div key={index}>{`'product':${item.product},'quantity':${item.quantity}`}
-                    </div>
-                })
-            }<br/>
+
             <button onClick={onIncreaseClick}>Increase</button>
             <button onClick={onUpdateClick}>Update</button>
             <button onClick={onDeleteClick}>Delete</button><br/><br/>
