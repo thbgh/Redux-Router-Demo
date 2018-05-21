@@ -3,8 +3,8 @@
  * @Date:   2018-05-13 13:02:24 PM Sunday
  * @Email:  thbwork2016@gmail.com
  * @Filename: App.js
- * @Last modified by:   THB
- * @Last modified time: 2018-05-14 21:15:31 PM Monday
+ * @Last modified by:   haibo
+ * @Last modified time: 2018-05-21 18:08:24 PM Monday
  */
 
 import React,{Component} from 'react';
@@ -40,8 +40,9 @@ class Index extends Component {
         </div>)
     }
     componentDidMount() {
-        // console.log(this.props)
-
+        console.log(window)
+        console.log(window.constants)
+        alert(window.constants.person.name)
     }
 }
 
