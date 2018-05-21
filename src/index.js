@@ -10,6 +10,10 @@ import { BrowserRouter as Router, Route, Link,Switch } from "react-router-dom";
 
 import App from './router'
 
+
+import './components/global';   //引入全局变量
+
+
 ReactDOM.render(
     <Provider store={store}>
         <div>
