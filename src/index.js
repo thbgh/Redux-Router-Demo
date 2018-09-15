@@ -5,21 +5,20 @@ import store from './redux/store.js';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Provider} from 'react-redux';
-import { BrowserRouter as Router, Route, Link,Switch } from "react-router-dom";
+import { Provider } from 'react-redux';
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 import App from './router'
 
 
-import './components/global';   //引入全局变量
-
+import './components/common/global';   //引入全局变量
 
 ReactDOM.render(
     <Provider store={store}>
         <div>
             {/* <h1>Redux Shopping Cart</h1>
             <p style={{borderBottom:'10px dotted blue'}}></p> */}
-            <App/>
+            <App />
         </div>
     </Provider>,
     document.getElementById('root')
